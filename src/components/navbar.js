@@ -46,13 +46,13 @@ function Navbar(prop) {
       <CssBaseline />
       <Toolbar>
         <Typography variant="h6" className={classes.logo}>
-          <img
+          <Link to="/"><img
             src="https://res.cloudinary.com/fitness-glory/image/upload/v1639477576/Logo-02_xgoth5.png"
             alt="logo"
             width={140}
             height={70}
             style={{ marginTop: "10px" }}
-          />
+          /></Link>
         </Typography>
         {isMobile ? (
           <DrawerComponent />

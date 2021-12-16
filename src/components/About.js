@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 
 export default function About() {
   return (
-    <div>
+    <div><center>
       <div className="containerAbt">
         <div className="abt-left-box">
           <div className="abtHead">
@@ -12,7 +12,7 @@ export default function About() {
           </div>
 
           <div className="abtPara">
-            <span>
+            <span className="abtPara">
               Open to students of Sri Lanka <br />
               Institute of Information Technology (SLIIT), <br />
               Who interest in joining <br />
@@ -43,7 +43,7 @@ export default function About() {
         </div>
         {/* <div className="marginBot"><br/></div> */}
         {/* <img className="watermark" src="https://res.cloudinary.com/fitness-glory/image/upload/v1639484985/logo_icon-01_s6oex8.png"/> */}
-      </div>
+      </div></center>
     </div>
   );
 }

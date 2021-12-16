@@ -1,14 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import "../App.css";
-import { Button } from "@material-ui/core";
-import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import { BorderAllRounded } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 const useOutlinedInputStyles = makeStyles((theme) => ({
   root: {
     "& $notchedOutline": {
-      border: "2px solid #f83600",
+      border: "2px solid white",
       borderRadius: "50px",
     },
     "&:hover $notchedOutline": {
@@ -56,7 +51,7 @@ export default function YourTicket() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     let imgUrl =
-      "https://res.cloudinary.com/fitness-glory/image/upload/v1639504502/white_ticket_mjyc78.png";
+      "https://res.cloudinary.com/fitness-glory/image/upload/v1639665552/ticket_500_x1000_rvedyj.svg";
     const nameInput = document.getElementById("name");
     const downloadBtn = document.getElementById("download-btn");
     const image = new Image();
@@ -67,16 +62,16 @@ export default function YourTicket() {
     };
     function drawImage() {
       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-      ctx.font = "600 40px Montserrat";
+      ctx.font = "600 45px Montserrat";
       ctx.fillStyle = "black";
-      ctx.fillText(nameInput.value, 45, 120);
+      ctx.fillText(nameInput.value, 73, 150);
     }
     nameInput.addEventListener("input", function () {
       drawImage();
     });
 
     downloadBtn.addEventListener("click", function () {
-      downloadBtn.href = canvas.toDataURL("image/jpg");
+      downloadBtn.href = canvas.toDataURL("image/png");
       downloadBtn.download = "MozillaTicket - " + nameInput.value;
     });
     image.onerror = function (err) {
@@ -84,24 +79,32 @@ export default function YourTicket() {
     };
   });
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // console.log(formValues);
+  };
+
   return (
-    <div>
+    <div><center>
       <>
         <div className="ticket-left">
           <span className="ticket-left-1">
-            Generate your Ticket <br />
-            <span className="ticket-left-2">FROM HERE!</span>
+            Generate Your Ticket Now!
+            {/* <span className="ticket-left-2">FROM HERE!</span> */}
           </span>
           <div>
             {/* <input className="nameInput" id="name" type='text' placeholder="Enter Your Name"/> */}
-            <form className={classes.root} autoComplete="off">
-              <FormControl variant="outlined" className="nameInputStyles">
+            <form className={classes.root} autoComplete="off" onSubmit={handleSubmit}>
+              <FormControl variant="outlined" className="nameInputStyles" onSubmit={handleSubmit}>
                 <InputLabel
                   style={{ color: "white" }}
                   ref={inputLabel}
                   htmlFor="outlined-age-simple"
+                  required="required"
+                  maxlength="12"
+                  minLength="10"
                 >
-                  Enter Your Name
+                  Enter your First and Last name
                 </InputLabel>
                 <OutlinedInput
                   id="name"
@@ -109,7 +112,15 @@ export default function YourTicket() {
                   style={{ color: "white" }}
                   labelWidth={labelWidth}
                   classes={outlinedInputClasses}
+                  required="required"
+                  maxlength="12"
+                  minLength="10"
                 />
+                 <div className="ticketBox" type="submit">
+                    <a href="#" type="submit" className="generateTicket" id="download-btn">
+                      Generate Ticket
+                    </a>
+                  </div>
               </FormControl>
             </form>
           </div>
@@ -124,24 +135,24 @@ export default function YourTicket() {
             <canvas
               className="cnvsStyle"
               ref={canvasRef}
-              height="410px"
-              width="800px"
+              height="500px"
+              width="1000px"
               style={{ border: "1px solid black", position: "center" }}
             />
           </div>
-          <div>
+          <div className="dontFogt">
             <span className="dontFogt">
               *Don't forget to tag Mozilla Campus Club of SLIIT <br /> when you
-              are sharing
+              are sharing on Social Media.
             </span>
-          </div>
+          </div><br/><br/>
         </div>
-        <div className="ticketBox">
+        {/* <div className="ticketBox">
           <a href="#" className="generateTicket" id="download-btn">
             Generate Ticket
           </a>
-        </div>
-      </>
+        </div> */}
+      </></center>
     </div>
   );
 }

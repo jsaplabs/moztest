@@ -21,7 +21,7 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("https://res.cloudinary.com/fitness-glory/image/upload/v1639545102/Background_image_gv9gzy.jpg");
   background-size: cover;
-  position: fixed;
+  /* position: fixed; */
   right: 0%;
   left: 0%;
   width: 100%;
@@ -78,8 +78,8 @@ li span {
 .myBtn a {
   font-size: 18px;
 }
-.myBtn {
-  /* border: 3px solid #f83600 !important; */
+/* .myBtn {
+  
   width: 180px;
   border-radius: 100px !important;
   height: 50px;
@@ -131,7 +131,7 @@ li span {
   transform: scaleX(1);
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-}
+} */
 
 .myBtn a:hover {
   color: white;
@@ -169,15 +169,15 @@ li span {
 
 .reg-left-box {
   width: 900px;
-  margin-left: 80px;
+  /* margin-left: 80px; */
   text-align: center;
   margin-top: 30px;
 }
 .abt-left-box {
-  width: 900px;
+  width: 1300px;
   margin-left: 10px;
   text-align: center;
-  margin-top: 150px;
+  margin-top: -50px;
 }
 .participateHead {
   color: #f83600;
@@ -207,25 +207,33 @@ li span {
 
 .abtHead {
   color: #f83600;
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
   align-content: center;
+  /* margin-top: 30px; */
 }
 
 .abtPara {
   color: white;
   font-size: 30px;
-  margin-top: -20px;
+  /* margin-top: -20px; */
+  margin-top: -30px;
 }
 
 .reg-right-box {
-  margin-left: 1100px;
-  margin-top: -120px;
+  /* margin-left: 1100px; */
+  margin-top: 50px;
 }
 .abt-right-box {
-  margin-left: 950px;
-  margin-top: -340px;
-  position: fixed;
+  /* margin-left: 950px; */
+  /* margin-top: -340px; */
+  /* margin-left: auto;
+  margin-top: auto; */
+  left:auto;
+  right: auto;
+  display: block;
+  position: relative;
+  margin-top: 50px;
   height: 400px;
   width: 400px;
   border: 3px solid #f83600 !important;
@@ -258,10 +266,39 @@ li span {
 }
 .zoom {
   font-size: 40px;
-  line-height: 4px;
+  /* line-height: 14px !important; */
 }
 .reg-right-box a {
   font-size: 25px;
+}
+
+.myBtn {
+  background-image: linear-gradient(
+    to right,
+    #fe8c00 0%,
+    #f83600 51%,
+    #fe8c00 100%
+  );
+}
+.myBtn {
+  margin: 10px;
+  width: 250px;
+  height: 60px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  /* box-shadow: 0 0 20px #eee; */
+  display: block;
+  border-radius: 100px !important;
+}
+
+.myBtn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 .btn-grad {
@@ -282,7 +319,7 @@ li span {
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
+  /* box-shadow: 0 0 20px #eee; */
   display: block;
   border-radius: 100px !important;
 }
@@ -295,18 +332,23 @@ li span {
 
 .ticket-left {
   color: white;
-  width: 500px;
-  margin-left: 80px;
+  width: 1000px;
+  /* margin-left: 80px; */
   text-align: center;
-  margin-top: 70px;
+  margin-top: 10px;
+  margin-left: auto !important;
+  margin-right:  auto !important;
+  left: 0;
+  right: 0;
 }
 
 .ticket-left-1 {
   letter-spacing: 0.125rem;
-  font-weight: 500;
-  font-size: 35px;
+  font-weight: 900;
+  font-size: 65px;
   font-family: "Montserrat", sans-serif;
   margin-bottom: -7px;
+  color: #f83600;
 }
 
 .ticket-left-2 {
@@ -319,13 +361,23 @@ li span {
 .nameInputStyles {
   width: 500px;
   margin-top: 40px !important;
+  /* left: 0 !important;
+  right: 0 !important; */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  /* margin-left: 3000px; */
+  display: block;
 }
 
 .ticket-right {
-  margin-left: 650px;
-  margin-top: -250px;
+  /* margin-left: 650px; */
+  margin-top: 50px;
 }
 
+/* form {
+  right: 0;
+  left: 0;
+} */
 .ticketBox {
   background: linear-gradient(
     to right,
@@ -340,10 +392,12 @@ li span {
   border-radius: 50px;
   transition: 0.5s;
   background-size: 200% auto;
-  box-shadow: 0 0 20px #eee;
+  /* box-shadow: 0 0 20px #eee; */
   display: block;
-  margin-top: -150px;
-  margin-left: 220px;
+  margin-top: 30px;
+  /* margin-left: 220px; */
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
 }
 .generateTicket {
@@ -363,7 +417,8 @@ li span {
 .dontFogt {
   letter-spacing: 0.125rem;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 15px;
+  margin-top: 20px;
   font-family: "Montserrat", sans-serif;
   color: white;
 }
@@ -372,6 +427,7 @@ li span {
   color: white;
   width: 900px;
   margin-top: 120px;
+  margin-left: 40px;
 }
 
 .contactheadH2 {
@@ -403,6 +459,13 @@ li span {
   margin-left: -250px;
 }
 
+tx {
+  color: #f83600;
+  font-weight: 700 !important;
+  /* text-transform: capitalize; */
+}
+
+
 @media all and (max-width: 768px) {
   .container {
     color: white;
@@ -417,7 +480,6 @@ li span {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 50px !important;
-    opacity: 0.85;
     margin-top: 50px;
     font-family: "Montserrat", sans-seri !important;
     padding: 20px !important;
@@ -456,7 +518,7 @@ li span {
     position: relative;
     display: block;
     background-color: black;
-    background: linear-gradient(0deg, black, #444444);
+    /* background: linear-gradient(0deg, black, #444444); */
     /* margin-left: -40px !important; */
   }
   .glowing::before {
@@ -549,11 +611,10 @@ li span {
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
-    box-shadow: 0 0 20px #eee;
+    /* box-shadow: 0 0 20px #eee; */
     display: block;
     border-radius: 100px !important;
     margin-top: 60px !important;
-    margin-top: 80px !important;
     margin-bottom: 30px !important;
   }
 
@@ -590,9 +651,9 @@ li span {
   }
 
   .reg-left-box {
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 320px;
+    margin-left: auto !important;
+    margin-right: auto !important;
     text-align: center;
     margin-top: 10px;
   }
@@ -627,15 +688,17 @@ li span {
 
   .regHead {
     color: #f83600;
-    font-size: 33px;
+    font-size: 30px;
     text-align: center;
     align-content: center;
+    width: 300px !important;
   }
 
   .regPara {
     color: white;
     font-size: 15px;
     margin-top: -10px;
+    width: 300px !important;
     /* animation-duration: 3s;
     animation-name: slideinBox; */
   }
@@ -730,6 +793,7 @@ li span {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -100px;
   }
 
   .reg-right-box a {
@@ -752,13 +816,14 @@ li span {
     margin: 10px;
     width: 200px;
     height: 60px;
+    margin-top: 150px !important;
     padding: 15px 45px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
-    box-shadow: 0 0 20px #eee;
+    /* box-shadow: 0 0 20px #eee; */
     display: block;
     border-radius: 100px !important;
   }
@@ -775,13 +840,13 @@ li span {
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 20px;
   }
 
   .ticket-left-1 {
     letter-spacing: 0.125rem;
-    font-weight: 500;
-    font-size: 25px;
+    font-weight: 900 !important;
+    font-size: 30px !important;
     font-family: "Montserrat", sans-serif;
     margin-bottom: -7px;
   }
@@ -824,7 +889,7 @@ li span {
     border-radius: 50px;
     transition: 0.5s;
     background-size: 200% auto;
-    box-shadow: 0 0 20px #eee;
+    /* box-shadow: 0 0 20px #eee; */
     display: block;
     margin-top: 30px !important;
     display: block !important;
@@ -846,16 +911,17 @@ li span {
     text-align: center;
   }
   .dontFogt {
-    /* letter-spacing: 0.125rem;
+    letter-spacing: 0.125rem;
     font-weight: 600;
     font-size: 10px;
+    width: 280px;
     font-family: "Montserrat", sans-serif;
     color: white;
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    margin-top: 100px; */
-    display: none;
+    margin-top: 30px;
+    /* display: none; */
   }
 
   .left-contact {
