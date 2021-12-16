@@ -51,7 +51,7 @@ export default function YourTicket() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     let imgUrl =
-      "https://res.cloudinary.com/fitness-glory/image/upload/v1639665552/ticket_500_x1000_rvedyj.svg";
+      "https://res.cloudinary.com/fitness-glory/image/upload/v1639673082/ticket_500_x1000_1_-01_s50yq0.png";
     const nameInput = document.getElementById("name");
     const downloadBtn = document.getElementById("download-btn");
     const image = new Image();
