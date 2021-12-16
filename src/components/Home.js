@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -40,9 +41,9 @@ export default function Home() {
             src="https://res.cloudinary.com/fitness-glory/image/upload/v1639484985/logo_icon-01_s6oex8.png"
           />
 
-          <Button className="myBtn">
-            <a style={{ textDecoration: "none" }}>Register Now</a>
-          </Button>
+         
+            <Link to="" style={{ textDecoration: "none" }}><Button className="myBtn">Register Now</Button></Link>
+          
         </div>
       </center>
     </div>

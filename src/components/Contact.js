@@ -44,9 +44,8 @@ export default function Contact() {
             </h2>
           </div>
           <div className="socialButtons">
-            <a
+            <Link to="https://web.facebook.com/sliitmcc"
               style={{ textDecoration: "none" }}
-              href="https://web.facebook.com/sliitmcc"
             >
               <Button
                 variant="contained"
@@ -56,10 +55,9 @@ export default function Contact() {
               >
                 Facebook
               </Button>
-            </a>
-            <a
+            </Link>
+            <Link to="https://www.linkedin.com/company/mozilla-campus-club-of-sliit"
               style={{ textDecoration: "none" }}
-              href="https://www.linkedin.com/company/mozilla-campus-club-of-sliit"
             >
               <Button
                 variant="contained"
@@ -69,10 +67,9 @@ export default function Contact() {
               >
                 LinkedIn
               </Button>
-            </a>
-            <a
+            </Link>
+            <Link to="https://twitter.com/mozillasliit"
               style={{ textDecoration: "none" }}
-              href="https://twitter.com/mozillasliit"
             >
               <Button
                 variant="contained"
@@ -82,10 +79,9 @@ export default function Contact() {
               >
                 Twitter
               </Button>
-            </a>
-            <a
+            </Link>
+            <Link to="https://www.instagram.com/mozillacampusclubsliit"
               style={{ textDecoration: "none" }}
-              href="https://www.instagram.com/mozillacampusclubsliit"
             >
               <Button
                 variant="contained"
@@ -95,7 +91,7 @@ export default function Contact() {
               >
                 Instagram
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
         <img
