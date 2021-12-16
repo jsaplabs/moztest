@@ -1,7 +1,6 @@
 import React from "react";
 import "../App.css";
 import { Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
 
 export default function Register() {
   return (
@@ -25,7 +24,7 @@ export default function Register() {
 
       <div className="reg-right-box">
         <Button className="btn-grad">
-          <Link to="" style={{ textDecoration: "none" }}>REGISTER NOW</Link>
+          <a style={{ textDecoration: "none" }}>REGISTER NOW</a>
         </Button>
       </div>
       <img
